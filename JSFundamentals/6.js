@@ -6,9 +6,9 @@ const inigo = {
   lastName: "Ogini",
   greeting(person) {
     let greeting = `Hello ${person.name}, my name is ${this.firstName} ${this.lastName}. `;
-    console.log(greeting + this.getCatchPhrase(person));
+    console.log(greeting + this.getCatchPhrase());
   },
-  getCatchPhrase(person) {
+  getCatchPhrase() {
     return "Nice to meet you.";
   },
 };
