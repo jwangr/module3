@@ -2,7 +2,7 @@ function Person(name, age) {
   this.name = name;
   this.age = age;
   this.human = true;
-  this.canDrive = age >= 18 ? "yes" : "no";
+  this.canDrive = age >= 16 ? "yes" : "no";
 }
 
 let smeagol = new Person("Smeagol", 589);
