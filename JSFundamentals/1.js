@@ -14,6 +14,6 @@ null + 1 // NaN
 undefined + 1 // NaN
 undefined == null // true
 undefined === null // false (typeof undefined = undefined; typeof null = object)
-" \t \n" - 2 // NaN ** (\t = horiznotal tabulator, \n = new line)
+" \t \n" - 2 // -2 ** (\t = horiznotal tabulator, \n = new line)
 
 console.log(" \t \n" - 2);
