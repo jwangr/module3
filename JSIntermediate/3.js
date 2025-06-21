@@ -14,13 +14,13 @@ function replaceMiddleAnimal(newValue) {
 console.log(replaceMiddleAnimal('Lemur'));
 
 function findMatchingAnimals(beginsWith) {
-    let pattern = /^beginsWith/gi;
+    let matching = [];
     for (item of animals) {
-        if (item.match(pattern)) {
-            newArray.push(item);
-            console.log(item);
+        if (beginsWith.toLowerCase() === item.slice(0, beginsWith.length).toLowerCase()) {
+            matching.push(item);
         }
     }
+    return matching;
 }
 
-findMatchingAnimals('Mee');
+console.log(findMatchingAnimals('mee'));
