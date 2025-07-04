@@ -48,11 +48,11 @@ console.log(getTitles('ge'), getTitles('a'));
 
 function getTitles2(authorInitial) {
     const pattern1 = new RegExp(`\^${authorInitial}`, 'i')
-    let authorsBooks = books.filter(book => { pattern1.test(book.author) });
+    let authorsBooks = books.filter(book => {return pattern1.test(book.author) });
     return authorsBooks;
 }
 
-// console.log(getTitles2('ge'), getTitles2('a'));
+console.log(getTitles2('ge'), getTitles2('a'));
 
 function latestBook() {
     let newestYear =0;
