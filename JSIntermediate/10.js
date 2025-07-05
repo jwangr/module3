@@ -8,7 +8,7 @@ console.log(totalMinutes + ' minutes have passed so far today');
 const totalSeconds = today.getHours() * 60 * 60 + today.getMinutes() * 60 + today.getSeconds();
 console.log(totalSeconds + ' seconds have passed so far today');
 
-const myAge = new Date('2000-01-01');
+const myAge = new Date('1990-10-12');
 
 const age = today - myAge;;
 let ageFormatted = new Date(age);
