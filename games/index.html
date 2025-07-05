@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Web Portal</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="services/games-service.js"></script>
+    <script src="components/myscripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Video Games Portal</h1>
+    </header>
+    <div id="maincontents" class="grid4Col">
+        <div class="card">
+            <img src="images/mrlazy.png">
+            <div>
+                <h2>Game 1</h2>
+            </div>
+            <div class="genre">
+                <div>Meet Mr Lazy</div>
+            </div>
+            <a class="playButton" target="_blank" href="https://www.freetogame.com/open/overwatch-2">Play</a>
+        </div>
+        <div class="card">Game 2</div>
+        <div class="card">Game 3</div>
+        <div class="card">Game 4</div>
+    </div>
+</body>
+
+<script>
+    function showGames(gamesArray) {
+        const gamesContainer = new GamesContainer();
+        maincontents.innerHTML = gamesContainer.getGameCards(gamesArray);
+    }
+
+    window.onload = async () => {
+        // get games for server
+        const gamesService = new GamesService();
+        const games = await gamesService.getGames();
+        console.log(games);
+
+        // show games to page
+        showGames(games);
+    }    
+</script>
+
+</html>
+
+
+<!-- <div class="card">
+    <div class="img-container" style="background-image: url(${game.thumbnail});"></div>
+    <div>
+        <h2>${game.title}</h2>
+    </div>
+    <div class="genre">
+        <div>${game.genre}</div>
+        <a class="playButton" target="_blank" href=${game.gameUrl}>Play</a>                        
+    </div>
+</div>         -->

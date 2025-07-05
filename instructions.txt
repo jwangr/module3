@@ -1,2 +1,20 @@
 - Complete JS Fundamentals
 - Complete JS Intermediate, up to and including Q5
+
+5/7/25 
+Intermediate:
+6-10
+
+JS_Advanced_LabExercises:
+Note: Please priortise to first work on non-optional exercises in the JS_Advanced_LabExercises:
+#1
+#2
+#3 - optional
+#4a
+#5a - use an arrow function in setTimeout
+#5b - use spread syntax to create clone and override year
+#5c - just need to write a comment
+#6 - optional
+#8
+#9 - optional
+#10 - optional, but we will do a practical example together

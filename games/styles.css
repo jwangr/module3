@@ -1,0 +1,77 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    margin: 0px;
+    text-align: center;
+    background-color: #368980;
+    color: white;
+    padding: 20px;
+}
+
+header > h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+#maincontents {
+    padding: 20px;
+}
+
+.grid4Col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 25px;
+    column-gap: 25px;
+}
+
+.grid4Col > div.card {
+    background-color: #F4F7F0;
+    padding: 20px;
+    box-shadow: 1px 1px 5px #6c8380;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.card > div {
+    width: 100%;
+    /* outline: 1px solid #368980; */
+    margin: 5px;
+    padding: 5px;
+}
+
+div.card h2 {
+    height: 50px;
+}
+
+.grid4Col .img-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid4Col div.genre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.playButton {
+    padding: 10px;
+    background-color: #368980;
+    color: white;
+    border: #368980;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+}
