@@ -1,0 +1,263 @@
+/* functional classes */
+.align-end {
+  align-items: end;
+}
+
+.flexrow {
+  display: flex;
+  justify-content: center;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display_none {
+  display: none;
+}
+
+.m10 {margin:10px;}
+
+.p15 {padding: 15px;}
+
+/* change Bootstrap */
+.btn-primary {
+  background-color: #ba0f30;
+  border: 1px #ba0f30;
+  border-radius: .5 em;
+}
+/* animations */
+.animate-rotate {
+  animation: thisrotates 1.5s forwards;
+}
+
+@keyframes thisrotates {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.banner {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ba0f30;
+  color: white;
+  box-shadow: 1px 1px 4px gray;
+}
+.banner > div {
+  width: 90%;
+  text-align: center;
+}
+
+.banner button {
+  font-size: xx-large;
+  color: white;
+}
+
+.banner img {
+  width: auto;
+  height: 50px;
+}
+
+.menu {
+  width: 80vw;
+  box-shadow: 3px 3px 5px grey;
+  z-index: 100;
+
+  position: fixed;
+  left: -100%;
+  top: 0;
+}
+
+.menu-display {
+  animation-name: slide_right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide_right {
+  from {
+    position: fixed;
+    left: -100%;
+    top: 0%;
+  }
+  to {
+    left: 0%;
+    top: 0;
+    display: block;
+  }
+}
+
+.menu-hide {
+  animation-name: slide_left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide_left {
+  from {
+    position: fixed;
+    left: 0%;
+    top: 0%;
+  }
+  to {
+    left: -100%;
+    top: 0;
+  }
+}
+
+.menu-banner {
+  min-height: fit-content;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+
+  background-color: #ba0f30;
+}
+
+.menu-banner img {
+  width: 50px;
+  height: auto;
+}
+
+.menu-banner button {
+  font-size: xx-large;
+  color: white;
+  text-align: right;
+}
+
+.menu-list {
+  height: 90vh;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.menu-list button {
+  text-align: center;
+  font-size: xx-large;
+  border-radius: 0;
+}
+
+.main-contents {
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.main-contents > h2 {
+  text-align: center;
+}
+
+.card {
+  margin: 15px;
+  padding: 5px;
+  text-align: center             ;
+}
+
+.card img{
+  width: 70%;
+  height: auto;
+  text-align: center;
+  margin: 10px;
+}
+
+.description p, .description ul{
+  padding: 8px 15px;
+  margin: 0;
+  text-align: justify;
+}
+/* Water card styling */
+#water input {
+  width: 40%;
+  margin: 10px;
+}
+
+.water_form {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.water-scale {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.card-text {
+  text-align: center;
+}
+
+.cups {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drunk {
+  background-color: #3545dc;
+}
+
+.toodrunk {
+  background-color: #dc3545;
+}
+
+/* Weight card styling - note .weight_form and changeIBW are above */
+#weight_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 150px;
+}
+
+#weight_today {
+  background-color: lightgrey;
+  color: darkslategrey;
+  text-align: center;
+  font-size: 3rem;
+  width: 35%;
+  margin: 10px;
+  margin-bottom: 0;
+
+  border:none;
+  border-radius: 10px;
+}
+#weight_today:focus {
+  outline: none;
+  box-shadow: 0.5px 0.5px 4px darkgray;
+  transform: scale(105%, 105%);
+}
+
+/* Symptoms Styling CSS */
+.scale {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scale > div {
+  margin: 5px;
+}
+.scale > .flexrow {
+  justify-content: space-between;
+  width: 50%;
+}
+
+#symptoms_cards p{
+  font-style: italic;
+}

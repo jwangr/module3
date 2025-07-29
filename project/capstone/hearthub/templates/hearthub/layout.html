@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'hearthub/images/logo.png' %}">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{% static 'hearthub/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'hearthub/script.js' %}"></script>
+    </head>
+
+    <body>
+        <!-- Banner Bar -->
+        <div class="flexrow banner">
+            <button class="btn btn-outline-danger btn-lg" id="show_menu_button">☰</button>
+            <div class="flexrow">
+                <img src="{% static 'hearthub/images/logo.png' %}">
+                <h1>{% block page-title %}{% endblock %}</h1>
+            </div>
+
+        </div>
+
+        <!-- Menu Bar -->
+        <div class="menu no-animation">
+            <div class="flexrow menu-banner">
+                <img src="{% static 'hearthub/images/logo.png' %}">
+                <button class="btn btn-outline-danger btn-lg" id="hide_menu_button">☰</button>
+            </div>
+
+            <div class="menu-list">
+                <button id="HomeLink" type="button" class="btn btn-outline-danger">Home</button>
+                <button id="AboutLink" type="button" class="btn btn-outline-danger">❤️ About Heart Hub</button>
+                <button id="WaterLink" type="button" class="btn btn-outline-danger">💧 Water Tracking</button>
+                <button id="WeightLink" type="button" class="btn btn-outline-danger">⚖️ Weight Tracking</button>
+                <button id="SymptomLink" type="button" class="btn btn-outline-danger">🫀 Symptoms</button>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}" class="btn btn-outline-danger">Log Out</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-outline-danger">Log In</a>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="main-contents">
+            {% block body %}
+            {% endblock %}
+        </div>
+
+    </body>
+
+</html>
